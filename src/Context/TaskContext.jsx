@@ -3,9 +3,10 @@ import React, { createContext, useState } from 'react'
 
 const TaskContext = ({children}) => {
     const [Task, setTask]= useState([])
+      const [Todo, setTodo] = useState([]) 
     
   return (
-   <listContext.Provider  value={[Task,setTask]}>
+   <listContext.Provider  value={{Task,setTask,Todo,setTodo}}>
     {children}
 
    </listContext.Provider>
